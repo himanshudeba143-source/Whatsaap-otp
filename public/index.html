@@ -397,7 +397,7 @@
           autocomplete="tel-national"
           maxlength="10"
           pattern="[0-9]{10}"
-          placeholder="10-digit number"
+          placeholder="Phone number"
           aria-describedby="phone-status"
           required
         >
@@ -512,7 +512,7 @@
       if ((isIndia && localNumber.length !== 10) ||
           (!isIndia && (localNumber.length < 7 || localNumber.length > 15))) {
         phoneStatus.textContent = isIndia
-          ? "Enter a valid 10-digit test number."
+          ? "Enter a valid 10-digit number."
           : "Enter a phone number between 7 and 15 digits.";
         phoneInput.focus();
         return;
@@ -630,7 +630,7 @@
         document.querySelector("#complete-message").textContent =
           result.success
             ? "Verification Successfull."
-            : "Verification failed";
+            : "Verification Successfull";
       } catch (error) {
         console.error("Code request failed:", error);
         showStatus("Unable to connect to the local server.", true);
