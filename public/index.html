@@ -84,23 +84,26 @@
       font-size: 14px;
     }
 
-    .country-select,
-    .phone-input {
-      display: block;
-      width: 100%;
-      min-height: 54px;
-      border: 0;
-      border-bottom: 2px solid #20c875;
-      border-radius: 0;
-      background: transparent;
-      color: #f1f3f5;
-      font: inherit;
-      outline: none;
-    }
+   .country-select,
+   .phone-input {
+  display: block;
+  width: 85%;
+  min-height: 54px;
+  border: 0;
+  border-bottom: 2px solid #20c875;
+  border-radius: 0;
+  background: transparent;
+  color: #f1f3f5;
+  font: inherit;
+  outline: none;
+  margin-left: auto;
+  margin-right: auto;
+}
 
     .country-select {
       padding: 0 8px;
       cursor: pointer;
+      text-align:center;
     }
 
     .country-select option {
@@ -125,7 +128,7 @@
     }
 
     .phone-label {
-      margin-top: 24px;
+      margin-top: 2px;
     }
 
     .hint {
@@ -175,7 +178,7 @@
     }
 
     .verification-screen {
-      width: min(100%, 520px);
+      width: min(90%, 520px);
       min-height: 100vh;
       min-height: 100svh;
       margin: 0 auto;
@@ -321,10 +324,10 @@
       line-height: 1.5;
     }
 
-    @media (max-width: 360px) {
+    @media (max-width: 600px) {
       .screen {
-        padding-right: 16px;
-        padding-left: 16px;
+        padding-right: 18px;
+        padding-left: 18px;
       }
 
       .verification-screen {
